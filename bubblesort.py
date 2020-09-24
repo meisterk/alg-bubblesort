@@ -25,7 +25,17 @@ class TestBubblesort(unittest.TestCase):
         self.assertEqual(bubblesort([3, 2, 1]), [1, 2, 3])
 
     def test_3(self):
-        self.assertEqual(bubblesort([-3, 2, 1]), [-3, 1, 2])
+        self.assertEqual(bubblesort([3, 2, 1, 4, 5, 6, 4, 5, 4]),
+                         [1, 2, 3, 4, 4, 4, 5, 5, 6])
+
+    def test_4(self):
+        self.assertEqual(bubblesort([-3.5, 2.5, 1.3]), [-3.5, 1.3, 2.5])
+
+    def test_5(self):
+        self.assertEqual(bubblesort([]), [])
+
+    def test_6(self):
+        self.assertEqual(bubblesort([1]), [1])
 
 
 # Run Tests
